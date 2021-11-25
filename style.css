@@ -111,7 +111,7 @@ body {
 
 /*---------------------------ABOUT ME-----------------------------*/
 .about-container {
-  margin-bottom: 50px;
+  margin-bottom: 137px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -124,6 +124,7 @@ body {
   width: 60%;
 }
 .title-about {
+  margin-top: 20px;
   text-shadow: 4px 4px 4px rgba(34, 34, 34, 0.2);
   font-weight: lighter;
   font-size: 48px;
@@ -191,6 +192,7 @@ body {
 }
 
 .container-projects {
+  padding: 12px;
   width: 100%;
 }
 .icon-projects {

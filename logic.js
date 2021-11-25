@@ -44,7 +44,6 @@ function validarCampo(e) {
 			error.remove();
 		}
 
-		console.log('Hay algo')
 		e.target.classList.remove('border', 'border-danger')
 		e.target.classList.add('border', 'border-success')
 
@@ -57,7 +56,6 @@ function validarCampo(e) {
 
 	if (e.target.type === 'email') {
 		if (er.test(e.target.value)) {
-			console.log('Email Valido')
 			e.target.classList.remove('border', 'border-danger')
 			e.target.classList.add('border', 'border-success')
 			const error = document.querySelector('p.error')
@@ -75,38 +73,25 @@ function validarCampo(e) {
 	}
 
 	if (er.test(email.value) && email.value != "" && mensaje.value != "") {
-		console.log('Pasaste la validacion')
 		btn.disabled = false;
 		btn.classList.remove('not-allowed', 'opacity-50')
 
 	} else {
 		btn.disabled = true;
 		btn.classList.add('not-allowed', 'opacity-50')
-		console.log('Hay campos por llenar')
+	
 	}
 
 }
-function mostrarError(mensaje) {
-	console.log('Error')
-	const mensajeError = document.createElement('p');
-	mensajeError.textContent = mensaje;
-	mensajeError.classList.add('text-center', 'border', 'border-danger', 'p-3', 'mt-2', 'text-danger', 'error')
-
-	const errores = document.querySelectorAll('.error')
-	if (errores.length === 0) {
-		form.appendChild(mensajeError)
-	}
-
-}
-
-
-
 
 // TYPED
 const typed = new Typed(".typed", {
   strings: [
-    '<i class="text-typed">Systems Technician</i>',
+    
     '<i class="text-typed">Full Stack Developer</i>',
+	'<i class="text-typed">Systems Technician</i>',
+	'<i class="text-typed">Front-end developer</i>',
+    '<i class="text-typed">Back-end developer</i>',
   ],
   typeSpeed: 75, 
   startDelay: 300, 
