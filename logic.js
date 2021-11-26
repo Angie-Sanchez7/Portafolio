@@ -21,9 +21,7 @@ function showMenu() {
 }
 
 // CONTACT
-
 const er = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-
 
 EventListener();
 function EventListener() {
@@ -48,8 +46,6 @@ function validarCampo(e) {
 		if (error) {
 			error.remove();
 		}
-
-		
 		e.target.classList.remove('border', 'border-danger')
 		e.target.classList.add('border', 'border-success')
 
@@ -62,7 +58,6 @@ function validarCampo(e) {
 
 	if (e.target.type === 'email') {
 		if (er.test(e.target.value)) {
-			
 			e.target.classList.remove('border', 'border-danger')
 			e.target.classList.add('border', 'border-success')
 			const error = document.querySelector('p.error')
@@ -71,7 +66,6 @@ function validarCampo(e) {
 			}
 
 		} else {
-			
 			mostrarError('El email no es valido')
 			e.target.classList.remove('border', 'border-success')
 			e.target.classList.add('border', 'border-danger')
@@ -80,20 +74,17 @@ function validarCampo(e) {
 	}
 
 	if (er.test(email.value) && email.value != "" && mensaje.value != "") {
-		
 		btn.disabled = false;
 		btn.classList.remove('not-allowed', 'opacity-50')
 
 	} else {
 		btn.disabled = true;
 		btn.classList.add('not-allowed', 'opacity-50')
-		
 	}
 
 }
 
 function mostrarError(mensaje) {
-
 	const mensajeError = document.createElement('p');
 	mensajeError.textContent = mensaje;
 	mensajeError.classList.add('text-center', 'border', 'border-danger', 'p-3', 'mt-2', 'text-danger', 'error')
@@ -104,4 +95,26 @@ function mostrarError(mensaje) {
 	}
 
 }
+
+// TYPED
+const typed = new Typed(".typed", {
+  strings: [
+    
+    '<i class="text-typed">Full Stack Developer</i>',
+	'<i class="text-typed">Systems Technician</i>',
+	'<i class="text-typed">Front-end developer</i>',
+    '<i class="text-typed">Back-end developer</i>',
+  ],
+  typeSpeed: 75, 
+  startDelay: 300, 
+  backSpeed: 75,
+  smartBackspace: true, 
+  shuffle: false, 
+  backDelay: 1500, 
+  loop: true, 
+  loopCount: false, 
+  showCursor: true, 
+  cursorChar: '<i class="cursosChar">|</i>', 
+  contentType: "html", 
+});
 
