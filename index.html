@@ -355,49 +355,37 @@
    
     </div>
     <!------------------------------- CONTACTO ----------------------------------------->
+  
     <section class="container-contact" id="contact">
       <h3 class="text-center">Contact</h3>
       <div class="container-box" id="formulario">
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <label for="nombre" class="form-label">Name:</label>
-            <input type="text" class="form-control" id="nombre" name="Nombre" />
+          <div data-aos="fade-up" class="container">
+              <form action="" method="POST" data-netlify="true">
+                  <div class="row">
+                      <div class="col-sm-12  col-md-6">
+                          <label for="nombre" class="form-label ">Name:</label>
+                          <input type="text" class="form-control" id="nombre" name="Nombre">
+                      </div>
+                      <div class="col-sm-12  col-md-6">
+                          <label for="email" class="form-label ">Email:</label>
+                          <input type="email" class="form-control" id="email" name="email" name="email">
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-12">
+                          <label for="mensaje" class="form-label mt-3">Message:</label>
+                          <textarea class="form-control" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                      </div>
+                      <div class="col-12 mt-3 d-flex justify-content-center">
+                          <button id="enviar" type="submit" class="btn button-contact">Send
+                              <i class="fas fa-paper-plane "></i>
+                          </button>
+                      </div>
+                  </div>
+              </form>
           </div>
-          <div class="col-sm-12 col-md-6">
-            <label for="email" class="form-label">Email:</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              name="email"
-              name="email"
-            />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <label for="mensaje" class="form-label mt-3">Message:</label>
-            <textarea
-              class="form-control"
-              name="mensaje"
-              id="mensaje"
-              cols="30"
-              rows="10"
-            ></textarea>
-          </div>
-          <div class="col-12 mt-3 d-flex justify-content-center">
-            <button
-              id="enviar"
-              type="submit"
-              class="btn button-contact sumibtBtn"
-            >
-              Send
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </div>
-        </div>
       </div>
-    </section>
+  </section>
 
     <footer class="footer">
       <div class="icons">
